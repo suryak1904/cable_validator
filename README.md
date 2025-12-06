@@ -306,38 +306,6 @@ OD = Df + 2 × tb + 2 × ts
 
 Tolerance window = ±5%
 
----
-TEST CASE 1:
-standard: IEC 60502-1
-voltage: 0.6/1 kV
-conductorMaterial: Cu
-conductorClass: 2
-csa: 10
-insulationMaterial: PVC
-insulationThickness: 1.0
-sheathThickness: 1.4
-outerDiameter: 10.0
-freeText: ""
-
-Expected Result;
-  Conductor → PASS
-  Insulation → PASS
-  Sheath → PASS
-  OD → PASS
-
-TEST CASE 2 — FREE TEXT ONLY:
-  IEC 60502-1 10 sqmm Cu Class 2 PVC insulated cable 0.6/1kV ti 1mm sheath 1.4mm OD 10mm
-
-TEST CASE 4 — FAIL Case (Sheath too low)
-  10 sqmm Cu Class 2 PVC insulated ti 1mm sheath 0.5mm OD 8.5mm
-Why FAIL?
-  Sheath 0.5mm < minimum allowed (1.4mm)
-  OD also out of tolerance
-Expected:
-  Conductor → PASS
-  Insulation → PASS
-  Sheath → FAIL
-  OD → FAIL
 
 #  To Test in Postman
 
