@@ -339,6 +339,96 @@ Expected:
   Sheath → FAIL
   OD → FAIL
 
+#  To Test in Postman**
+
+### **1. Set up request**
+
+* Method → **POST**
+* URL → `http://localhost:3000/design/validate`
+* Body → **raw** → **JSON**
+
+---
+
+#  **Postman Test 1 — Full Structured Input **
+
+Copy/paste this JSON:
+
+```json
+{
+  "standard": "IEC 60502-1",
+  "voltage": "0.6/1 kV",
+  "conductorMaterial": "Cu",
+  "conductorClass": "2",
+  "csa": 10,
+  "insulationMaterial": "PVC",
+  "insulationThickness": 1.0,
+  "sheathThickness": 1.4,
+  "outerDiameter": 10.0,
+  "freeText": ""
+}
+```
+
+**Expected Output:** overallStatus = **PASS**
+
+---
+
+# 🔍 **Postman Test 2 — Free Text Only (AI + Validation)**
+
+```json
+{
+  "freeText": "IEC 60502-1 10 sqmm Cu Class 2 PVC insulated cable 0.6/1kV ti 1mm sheath 1.4mm OD 10mm"
+}
+```
+
+**Expected:**
+
+* AI extracts all fields
+* All validations PASS
+
+---
+
+# ⚠️ **Postman Test 3 — OD WARN Case**
+
+```json
+{
+  "freeText": "10 sqmm Cu Class 2 PVC 0.6/1kV ti 1mm sheath 1.4mm OD 10.2mm"
+}
+```
+
+**Expected:**
+
+* OD → **WARN**
+* All others PASS
+
+---
+
+# ❌ **Postman Test 4 — FAIL Case**
+
+```json
+{
+  "freeText": "10 sqmm Cu Class 2 PVC insulated ti 1mm sheath 0.5mm OD 8.5mm"
+}
+```
+
+**Expected:**
+
+* Sheath thickness → FAIL
+* OD → FAIL
+
+---
+
+# 🧪 **Postman Test 5 — Mixed Mode (Structured overrides AI)**
+
+```json
+{
+  "voltage": "0.6/1 kV",
+  "insulationThickness": 1,
+  "outerDiameter": 10,
+  "freeText": "Cu Class 2 PVC cable 10 sqmm ti 1mm sheath 1.4mm"
+}
+```
+
+
 # 📘 Documentation Provided
 
 * Full backend logic
@@ -360,5 +450,4 @@ Please open an issue for major changes.
 
 MIT License
 
-**"Generate architecture diagram"**,
-or **"Create full PDF"**, etc.
+
