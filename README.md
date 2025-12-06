@@ -7,16 +7,16 @@ The system consists of a **NestJS backend**, a **Next.js frontend**, and a **Pos
 
 ---
 
-# 🚀 Features
+#  Features
 
-### ✅ **AI-Powered Input Extraction (Gemini 2.5 Flash)**
+### **AI-Powered Input Extraction (Gemini 2.5 Flash)**
 
 * Extracts cable parameters from messy free-text
 * Enforces strict JSON output
 * Normalizes voltage, CSA, materials, thickness values
 * No guessing—unknown fields are set to `null`
 
-### ✅ **IEC-Compliant Validation Engine**
+###  **IEC-Compliant Validation Engine**
 
 Validates using official tables:
 
@@ -339,7 +339,7 @@ Expected:
   Sheath → FAIL
   OD → FAIL
 
-#  To Test in Postman**
+#  To Test in Postman
 
 ### **1. Set up request**
 
@@ -372,7 +372,7 @@ Copy/paste this JSON:
 
 ---
 
-# 🔍 **Postman Test 2 — Free Text Only (AI + Validation)**
+#  **Postman Test 2 — Free Text Only (AI + Validation)**
 
 ```json
 {
@@ -387,7 +387,7 @@ Copy/paste this JSON:
 
 ---
 
-# ⚠️ **Postman Test 3 — OD WARN Case**
+#  **Postman Test 3 — OD WARN Case**
 
 ```json
 {
@@ -402,7 +402,7 @@ Copy/paste this JSON:
 
 ---
 
-# ❌ **Postman Test 4 — FAIL Case**
+#  **Postman Test 4 — FAIL Case**
 
 ```json
 {
@@ -417,7 +417,7 @@ Copy/paste this JSON:
 
 ---
 
-# 🧪 **Postman Test 5 — Mixed Mode (Structured overrides AI)**
+#  **Postman Test 5 — Mixed Mode (Structured overrides AI)**
 
 ```json
 {
@@ -429,7 +429,7 @@ Copy/paste this JSON:
 ```
 
 
-# 📘 Documentation Provided
+#  Documentation Provided
 
 * Full backend logic
 * Calculation formulas
@@ -439,7 +439,7 @@ Copy/paste this JSON:
 
 ---
 
-# 🤝 Contributing
+#  Contributing
 
 Pull requests are welcome!
 Please open an issue for major changes.
