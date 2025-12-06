@@ -175,7 +175,7 @@ CREATE DATABASE iec_validation;
 ## 6️⃣ Seed IEC Tables
 
 ```bash
-npx ts-node src/iec_data/seed_iec.ts
+npx ts-node src/database/iec.seed.ts
 ```
 
 You should see:
