@@ -1,0 +1,16 @@
+body {
+  background: #ffffff !important;
+  color: #000000 !important;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.MuiTypography-root,
+.MuiInputBase-root,
+.MuiFormLabel-root {
+  color: #000 !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #555 !important;
+}

@@ -1,0 +1,117 @@
+########################################
+# GLOBAL IGNORES (Node / OS / Logs)
+########################################
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp directories
+.temp/
+.tmp/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports
+report.*.json
+
+########################################
+# ENVIRONMENT VARIABLES (VERY IMPORTANT)
+########################################
+
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+
+########################################
+# FRONTEND (Next.js)
+########################################
+
+# Next.js build output
+.next/
+out/
+.next/cache/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel deployment
+.vercel/
+
+########################################
+# BACKEND (NestJS)
+########################################
+
+# Nest compiled output
+dist/
+build/
+
+########################################
+# TESTING
+########################################
+
+coverage/
+.nyc_output/
+
+########################################
+# PACKAGE MANAGER FILES
+########################################
+
+# Yarn / pnpm
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+########################################
+# IDE & EDITOR FILES
+########################################
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains / IntelliJ
+.idea/
+*.iml
+
+# Others
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
