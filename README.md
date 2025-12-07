@@ -231,7 +231,7 @@ http://localhost:3001/design_validator
 ### ✔ PASS Case
 
 ```
-IEC 60502-1 10 sqmm Cu Class 2 PVC insulated cable ti 1.0mm sheath 1.4mm OD 10mm
+IEC 60502-1 0.6/1kV 10 sqmm Cu Class 2 PVC insulated cable ti 1.0mm sheath 1.4mm OD 9.9mm
 ```
 
 ### ✔ WARN Case
@@ -317,7 +317,7 @@ Tolerance window = ±5%
 
 ---
 
-#  **Postman Test 1 — Full Structured Input **
+#  Postman Test 1 — Full Structured Input 
 
 Copy/paste this JSON:
 
